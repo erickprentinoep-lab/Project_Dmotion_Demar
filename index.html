@@ -29,6 +29,21 @@
         .mask-image-gradient {
             mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes scrolling-text {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 
