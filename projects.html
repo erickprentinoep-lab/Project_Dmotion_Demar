@@ -11,7 +11,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-neon-blue: #00d2ff;
+            --color-neon-pink: #ff00ff;
+            --color-dark: #0a0a0a;
+            --color-deep-black: #050505;
+            --color-accent: #00d2ff;
+            --color-muted: #888888;
+            --font-heading: "Bricolage Grotesque", sans-serif;
+            --font-sans: "Inter", sans-serif;
+        }
+
+        /* Custom Utilities */
+        .mask-image-gradient {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
 </head>
 
 <body class="bg-dark text-accent font-sans selection:bg-accent selection:text-dark overflow-x-hidden">
@@ -607,7 +625,7 @@
         <a href="https://dmtn.gumroad.com/" target="_blank" class="mobile-link text-accent mt-4">Demar Maket</a>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 
 </html>
