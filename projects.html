@@ -11,33 +11,82 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-neon-blue: #00d2ff;
-            --color-neon-pink: #ff00ff;
+            /* Base Theme Colors */
             --color-dark: #0a0a0a;
+            --color-accent: #ffffff;
+            --color-muted: #a1a1aa;
+            --color-neon-blue: #00d2ff;
             --color-deep-black: #050505;
-            --color-accent: #00d2ff;
-            --color-muted: #888888;
-            --font-heading: "Bricolage Grotesque", sans-serif;
-            --font-sans: "Inter", sans-serif;
+            --color-tech-line: #2a2a2a;
+
+            /* Typography */
+            --font-heading: "Bricolage Grotesque", "sans-serif";
+            --font-sans: "Inter", "sans-serif";
+
+            --animate-marquee: marquee 30s linear infinite;
+            --animate-marquee-reverse: marquee-reverse 15s linear infinite;
+            --animate-scrolling-text: scrolling-text 30s linear infinite;
+            --animate-spin-slow: spin 20s linear infinite;
+
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            @keyframes marquee {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+
+            @keyframes marquee-reverse {
+                from { transform: translateX(-50%); }
+                to { transform: translateX(0); }
+            }
+
+            @keyframes scrolling-text {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
         }
 
         /* Custom Utilities */
-        .mask-image-gradient {
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        .filter-btn.active {
+            border-color: #00a3ff !important;
+            background: rgba(0, 163, 255, 0.1) !important;
+            color: white !important;
+            box-shadow: 0 0 15px rgba(0, 163, 255, 0.2);
         }
 
-        @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+        .project-card.is-playing .project-thumb,
+        .project-card.is-playing h3,
+        .project-card.is-playing span,
+        .project-card.is-playing .absolute {
+            opacity: 0 !important;
+            visibility: hidden !important;
         }
 
-        @keyframes marquee-reverse {
-            from { transform: translateX(-50%); }
-            to { transform: translateX(0); }
+        .video-iframe-wrapper {
+            position: absolute;
+            inset: 0;
+            z-index: 100;
+            border-radius: 32px;
+            background: #000;
+        }
+
+        .video-iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 32px;
+        }
+
+        .logo-marquee-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            padding: 20px 40px;
         }
     </style>
 </head>

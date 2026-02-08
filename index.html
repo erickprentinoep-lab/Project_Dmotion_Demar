@@ -11,39 +11,137 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-neon-blue: #00d2ff;
-            --color-neon-pink: #ff00ff;
+            /* Base Theme Colors */
             --color-dark: #0a0a0a;
+            --color-accent: #ffffff;
+            --color-muted: #a1a1aa;
+            --color-neon-blue: #00d2ff;
             --color-deep-black: #050505;
-            --color-accent: #00d2ff;
-            --color-muted: #888888;
-            --font-heading: "Bricolage Grotesque", sans-serif;
-            --font-sans: "Inter", sans-serif;
+            --color-tech-line: #2a2a2a;
+
+            /* Typography */
+            --font-heading: "Bricolage Grotesque", "sans-serif";
+            --font-sans: "Inter", "sans-serif";
+
+            --animate-marquee: marquee 30s linear infinite;
+            --animate-marquee-reverse: marquee-reverse 15s linear infinite;
+            --animate-scrolling-text: scrolling-text 30s linear infinite;
+            --animate-spin-slow: spin 20s linear infinite;
+
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            @keyframes marquee {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+
+            @keyframes marquee-reverse {
+                from { transform: translateX(-50%); }
+                to { transform: translateX(0); }
+            }
+
+            @keyframes scrolling-text {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
         }
 
-        /* Custom Utilities */
+        /* Custom Utilities that Tailwind doesn't handle natively or for ease of use */
+        .reveal, .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active, .reveal-on-scroll.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .video-container {
+            width: calc(var(--scale-video) * 100%);
+            border-radius: var(--radius-video);
+            overflow: hidden;
+            transition: width 0.1s linear, border-radius 0.1s linear;
+            box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+            position: relative;
+        }
+
+        .logo-marquee-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            padding: 20px 40px;
+        }
+
+        .scrollable-marquee {
+            cursor: grab;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        .scrollable-marquee::-webkit-scrollbar { display: none; }
+
+        .perspective-1000 { perspective: 1000px; }
+        .tilt-wrapper { transition: transform 0.1s ease-out; }
+
         .mask-image-gradient {
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
             mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
 
-        @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+        .circuit-lines {
+            background-image:
+                linear-gradient(to right, rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
 
-        @keyframes marquee-reverse {
-            from { transform: translateX(-50%); }
-            to { transform: translateX(0); }
+        .hud-bar-container {
+            border: 1px solid #4deeea;
+            width: 20px;
+            height: 180px;
+            padding: 3px;
         }
 
-        @keyframes scrolling-text {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+        .hud-bar-fill {
+            background-color: #4deeea;
+            width: 100%;
+            height: 60%;
+            animation: hud-bar-anim 3s infinite alternate ease-in-out;
         }
+
+        @keyframes hud-bar-anim {
+            0% { height: 30%; opacity: 0.8; }
+            100% { height: 75%; opacity: 1; }
+        }
+
+        .hud-globe {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #00d2ff;
+            opacity: 0.5;
+            position: relative;
+            animation: spin 8s linear infinite;
+        }
+
+        .hud-globe::before, .hud-globe::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 1px solid #00d2ff;
+            opacity: 0.5;
+        }
+        .hud-globe::before { transform: rotateX(60deg); }
+        .hud-globe::after { transform: rotateY(60deg); }
     </style>
 </head>
 

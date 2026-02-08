@@ -15,14 +15,42 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-neon-blue: #00d2ff;
-            --color-neon-pink: #ff00ff;
+            /* Base Theme Colors */
             --color-dark: #0a0a0a;
+            --color-accent: #ffffff;
+            --color-muted: #a1a1aa;
+            --color-neon-blue: #00d2ff;
             --color-deep-black: #050505;
-            --color-accent: #00d2ff;
-            --color-muted: #888888;
-            --font-heading: "Bricolage Grotesque", sans-serif;
-            --font-sans: "Inter", sans-serif;
+            --color-tech-line: #2a2a2a;
+
+            /* Typography */
+            --font-heading: "Bricolage Grotesque", "sans-serif";
+            --font-sans: "Inter", "sans-serif";
+
+            --animate-marquee: marquee 30s linear infinite;
+            --animate-marquee-reverse: marquee-reverse 15s linear infinite;
+            --animate-scrolling-text: scrolling-text 30s linear infinite;
+            --animate-spin-slow: spin 20s linear infinite;
+
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            @keyframes marquee {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+
+            @keyframes marquee-reverse {
+                from { transform: translateX(-50%); }
+                to { transform: translateX(0); }
+            }
+
+            @keyframes scrolling-text {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
         }
 
         /* Custom Utilities */
