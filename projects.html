@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Demar Dmotion</title>
+    <!-- Google Fonts: Bricolage Grotesque & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-dark text-accent font-sans selection:bg-accent selection:text-dark overflow-x-hidden">
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-dark/80 backdrop-blur-md border-b border-white/5">
+        <a href="index.html#home" class="flex items-center z-50 relative">
+            <img src="assets/images/logo-demar.png" alt="DMOTION Logo" class="h-8 md:h-10 w-auto object-contain">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+            <a href="index.html#home" class="hover:text-muted transition-colors">Home</a>
+            <a href="projects.html" class="text-neon-blue font-bold">Projects</a>
+            <a href="about.html" class="hover:text-accent transition-colors">About</a>
+            <a href="index.html#contact" class="hover:text-muted transition-colors">Contact</a>
+        </div>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center gap-4">
+            <a href="https://dmtn.gumroad.com/" target="_blank"
+                class="hidden md:inline-block bg-accent text-dark px-5 py-2 rounded-full text-sm font-semibold hover:bg-muted transition-all">Demar
+                Maket</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 relative text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 bg-dark">
+        <!-- Projects Header -->
+        <section class="px-6 md:px-12 mb-20 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="font-heading text-6xl md:text-8xl font-black tracking-tighter text-white mb-8">
+                    PROJECTS US
+                </h1>
+                <p class="text-white/60 text-lg md:text-xl font-light leading-relaxed">
+                    DEMAR DMOTION adalah studio kreatif yang bergerak di bidang 3D Animation, Visual Effects, Motion
+                    Graphics, dan Video Editing. Kami menghadirkan visual yang kuat, dinamis, dan modern untuk mendukung
+                    kebutuhan branding, event, musik, hingga konten digital. Setiap proyek dikerjakan dengan perhatian
+                    pada detail, ritme visual, dan konsep yang matang untuk menghasilkan karya yang tidak hanya menarik
+                    secara visual, tetapi juga memiliki karakter dan identitas yang jelas❤️.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Filter -->
+        <section class="px-6 md:px-12 mb-12 flex flex-wrap justify-center gap-3">
+            <button
+                class="filter-btn active px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-xs font-bold tracking-widest uppercase hover:border-white transition-all duration-300"
+                data-filter="all">
+                ALL
+            </button>
+            <button
+                class="filter-btn px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-xs font-bold tracking-widest uppercase hover:border-pink-500 transition-all duration-300"
+                data-filter="bumper">
+                BUMPER
+            </button>
+            <button
+                class="filter-btn px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-xs font-bold tracking-widest uppercase hover:border-cyan-400 transition-all duration-300"
+                data-filter="logo">
+                LOGO
+            </button>
+            <button
+                class="filter-btn px-6 py-2 rounded-full border border-white/10 bg-white/5 text-white/60 text-xs font-bold tracking-widest uppercase hover:border-neon-blue transition-all duration-300"
+                data-filter="visual">
+                VISUAL
+            </button>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="px-4 md:px-12 max-w-[1600px] mx-auto relative z-10 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project Box 1 -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="logo" data-video-id="Rf3EuWzcG_Y">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/Rf3EuWzcG_Y/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">LOGO
+                                    LOOPING</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    LOGO DJ Febs</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://www.youtube.com/watch?v=CWzALS_gAZI" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Box 2 -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="visual" data-video-id="CWzALS_gAZI">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/CWzALS_gAZI/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">Visual</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    Visual 1</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://www.youtube.com/watch?v=CWzALS_gAZI" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Box 3 -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="visual" data-video-id="KD9jrM6dtCA">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/KD9jrM6dtCA/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">VISUAL</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    CREATIVE VISUAL</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://www.youtube.com/watch?v=KD9jrM6dtCA" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Box 4 -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="visual" data-video-id="dYsuP5Iy-ok">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/dYsuP5Iy-ok/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">VISUAL</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    DYNAMIC FEED</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://www.youtube.com/watch?v=dYsuP5Iy-ok" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Box 5 (Reuse for demo) -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="bumper" data-video-id="sTJIy4H45tU">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/sTJIy4H45tU/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">BUMPER</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    Bumper Dimas Andrean</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://youtu.be/sTJIy4H45tU" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Box 6 (Reuse for demo) -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="bumper" data-video-id="1CKjvWJJoX0">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/1CKjvWJJoX0/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">BUMPER</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    BUMPER DEBBY KENNEDY</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://youtu.be/1CKjvWJJoX0" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Box 6 (Reuse for demo) -->
+                <div class="project-card group bg-[#0d0d0d] rounded-[32px] overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-700 shadow-2xl relative"
+                    data-category="bumper" data-video-id="Owv6mrwEzv0">
+                    <div class="relative aspect-[16/10] overflow-hidden group-cursor-play">
+                        <img src="https://img.youtube.com/vi/Owv6mrwEzv0/maxresdefault.jpg"
+                            class="project-thumb w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-1000"
+                            alt="Project Thumb">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-8">
+                            <div class="w-full">
+                                <span
+                                    class="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-3 block">BUMPER</span>
+                                <h3 class="text-3xl font-black text-white uppercase tracking-tighter leading-none">
+                                    BUMPER DJ JELLY</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 pointer-events-none">
+                            <div
+                                class="w-16 h-16 bg-white flex items-center justify-center rounded-full text-black shadow-2xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex justify-center w-full bg-[#0d0d0d]">
+                        <a href="https://youtu.be/Owv6mrwEzv0" target="_blank"
+                            class="flex items-center gap-3 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all group-hover:border-white/30 group-hover:bg-white/10 group-hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="text-red-600">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                            <span class="text-white font-bold text-sm tracking-widest uppercase">See on YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="px-4 md:px-8 pb-8 bg-dark relative z-20 mt-20">
+            <div class="max-w-[1400px] mx-auto space-y-4">
+
+                <!-- 1. Top CTA Section -->
+                <div
+                    class="rounded-4xl bg-linear-to-br from-[#00d2ff] via-[#1a1a1a] to-black p-12 md:p-24 text-center relative overflow-hidden border border-white/10 group">
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none">
+                    </div>
+
+                    <!-- Logo Float -->
+                    <div class="mb-8 flex justify-center">
+                        <div class="flex items-center gap-2 opacity-80">
+                            <img src="assets/images/logo-demar.png" alt="DMOTION DEMAR"
+                                class="h-24 md:h-32 w-auto object-contain">
+                        </div>
+                    </div>
+
+                    <h2
+                        class="font-heading text-4xl md:text-8xl font-black tracking-tighter text-white mb-4 leading-tight">
+                        COME ON BRO !<br>
+                        LET'S COLLABORATE
+                    </h2>
+                    <p class="text-white/60 text-lg mb-10">Hubungi gue dibawah ya bro !</p>
+
+                    <a href="https://wa.me/6282125139481"
+                        class="inline-flex items-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#25D366] transition-all hover:scale-105 shadow-[0_0_30px_rgba(37,211,102,0.4)]">
+                        Let's Collaborate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </a>
+
+                    <p class="text-white/40 text-sm font-light my-6 tracking-widest">-------- or --------</p>
+
+                    <a href="https://dmtn.gumroad.com/" target="_blank"
+                        class="inline-flex items-center gap-3 bg-[#ff90e8] text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,144,232,0.4)]">
+                        <svg width="24" height="24" viewBox="0 0 209 201" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="group-hover:scale-110 transition-transform">
+                            <g clip-path="url(#clip0_gumroad_main_cta)">
+                                <path
+                                    d="M122.117 198.316C169.682 198.316 208.24 161.094 208.24 115.178C208.24 69.2626 169.682 32.0403 122.117 32.0403C74.5529 32.0403 35.9939 69.2626 35.9939 115.178C35.9939 161.094 74.5529 198.316 122.117 198.316Z"
+                                    fill="white" fill-opacity="0.1" />
+                                <path
+                                    d="M99.8909 180.893C149.917 180.893 190.762 141.703 190.762 93.0071C190.762 44.3113 149.917 5.12085 99.8909 5.12085C49.8649 5.12085 9.01978 44.3113 9.01978 93.0071C9.01978 141.703 49.8649 180.893 99.8909 180.893Z"
+                                    fill="white" stroke="black" stroke-opacity="0.1" stroke-width="6.25" />
+                                <path
+                                    d="M93.0558 137.346C67.6239 137.346 52.6643 116.798 52.6643 91.2376C52.6643 64.6744 69.1197 43.1238 100.535 43.1238C132.948 43.1238 143.918 65.1762 144.417 77.7051H120.98C120.482 70.6888 114.497 60.1641 100.037 60.1641C84.5787 60.1641 74.6052 73.6961 74.6052 90.2352C74.6052 106.774 84.5787 120.306 100.037 120.306C113.999 120.306 119.983 109.28 122.476 98.2545H100.037V89.2328H147.122V135.341H126.465V106.273C124.969 116.798 118.487 137.346 93.0558 137.346Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_gumroad_main_cta">
+                                    <rect width="208" height="200" fill="white"
+                                        transform="translate(0.239502 0.275146)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Buy my Visual
+                    </a>
+                </div>
+
+                <!-- 2. Middle Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+                    <!-- Left: Contact Info & Newsletter -->
+                    <div
+                        class="rounded-4xl bg-[#111] p-10 md:p-14 border border-white/10 flex flex-col justify-between gap-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+                            <div class="space-y-6">
+                                <div class="space-y-2">
+                                    <p class="text-white font-bold">Address:</p>
+                                    <p class="text-muted">Indonesia, Sumatera Utara. Kota Medan</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="text-white font-bold">Email:</p>
+                                    <p class="text-muted">dmotiondemar@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="space-y-2">
+                                    <p class="text-white font-bold">Phone:</p>
+                                    <p class="text-muted">0853-9428-8987</p>
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="text-white font-bold">Business Hours:</p>
+                                    <p class="text-muted">Senin - Minggu ( 24 jam )</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Links -->
+                    <div class="rounded-4xl bg-[#111] p-10 md:p-14 border border-white/10">
+                        <div class="grid grid-cols-2 gap-10 h-full">
+                            <div>
+                                <h3 class="text-white font-bold mb-6">Quick Links</h3>
+                                <ul class="space-y-4 text-sm font-medium text-muted">
+                                    <li><a href="index.html" class="hover:text-white transition-colors">HOME</a>
+                                    </li>
+                                    <li><a href="#" class="text-neon-blue transition-colors">PROJECTS</a>
+                                    </li>
+                                    <li><a href="#" class="hover:text-white transition-colors">PROJECTS SIMPLIFIED</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="text-white font-bold mb-6">&nbsp;</h3>
+                                <ul class="space-y-4 text-sm font-medium text-muted">
+                                    <li><a href="about.html" class="hover:text-white transition-colors">ABOUT</a></li>
+                                    <li><a href="#" class="hover:text-white transition-colors">SERVICES</a></li>
+                                    <li><a href="#contact" class="hover:text-white transition-colors">CONTACT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. Bottom Wide Buttons -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="https://www.tiktok.com/@dmtn_visual?lang=id-ID"
+                        class="rounded-full bg-[#111] border border-white/10 p-5 flex items-center justify-between text-muted hover:text-white hover:bg-white/5 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                            </svg>
+                            <span class="font-bold text-sm">TIKTOK</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+
+                    <a href="https://dmtn.gumroad.com/" target="_blank"
+                        class="rounded-full bg-[#111] border border-white/10 p-5 flex items-center justify-between text-muted hover:text-white hover:bg-white/5 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <svg width="20" height="20" viewBox="0 0 209 201" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="group-hover:scale-110 transition-transform">
+                                <g clip-path="url(#clip0_gumroad)">
+                                    <path
+                                        d="M122.117 198.316C169.682 198.316 208.24 161.094 208.24 115.178C208.24 69.2626 169.682 32.0403 122.117 32.0403C74.5529 32.0403 35.9939 69.2626 35.9939 115.178C35.9939 161.094 74.5529 198.316 122.117 198.316Z"
+                                        fill="white" fill-opacity="0.1" />
+                                    <path
+                                        d="M99.8909 180.893C149.917 180.893 190.762 141.703 190.762 93.0071C190.762 44.3113 149.917 5.12085 99.8909 5.12085C49.8649 5.12085 9.01978 44.3113 9.01978 93.0071C9.01978 141.703 49.8649 180.893 99.8909 180.893Z"
+                                        fill="white" stroke="black" stroke-opacity="0.1" stroke-width="6.25" />
+                                    <path
+                                        d="M93.0558 137.346C67.6239 137.346 52.6643 116.798 52.6643 91.2376C52.6643 64.6744 69.1197 43.1238 100.535 43.1238C132.948 43.1238 143.918 65.1762 144.417 77.7051H120.98C120.482 70.6888 114.497 60.1641 100.037 60.1641C84.5787 60.1641 74.6052 73.6961 74.6052 90.2352C74.6052 106.774 84.5787 120.306 100.037 120.306C113.999 120.306 119.983 109.28 122.476 98.2545H100.037V89.2328H147.122V135.341H126.465V106.273C124.969 116.798 118.487 137.346 93.0558 137.346Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_gumroad">
+                                        <rect width="208" height="200" fill="white"
+                                            transform="translate(0.239502 0.275146)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="font-bold text-sm">GUMROAD</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.youtube.com/@demardmotion8222"
+                        class="rounded-full bg-[#111] border border-white/10 p-5 flex items-center justify-between text-muted hover:text-white hover:bg-white/5 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" />
+                            </svg>
+                            <span class="font-bold text-sm">YOUTUBE</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/dmotion_demar/"
+                        class="rounded-full bg-[#111] border border-white/10 p-5 flex items-center justify-between text-muted hover:text-white hover:bg-white/5 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                            <span class="font-bold text-sm">INSTAGRAM</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+    </main>
+
+
+    <!-- Mobile Menu Overlay -->
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black/95 z-40 flex flex-col items-center justify-center gap-8 text-2xl font-bold opacity-0 pointer-events-none transition-opacity duration-300 text-center">
+        <a href="index.html#home" class="mobile-link hover:text-accent transition-colors">Home</a>
+        <a href="projects.html" class="mobile-link text-neon-blue">Projects</a>
+        <a href="about.html" class="mobile-link hover:text-accent transition-colors">About</a>
+        <a href="index.html#contact" class="mobile-link hover:text-accent transition-colors">Contact</a>
+        <a href="https://dmtn.gumroad.com/" target="_blank" class="mobile-link text-accent mt-4">Demar Maket</a>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+@import "tailwindcss";
+
+@theme {
+    /* Base Theme Colors */
+    --color-dark: #0a0a0a;
+    --color-accent: #ffffff;
+    --color-muted: #a1a1aa;
+    --color-neon-blue: #00d2ff;
+    --color-deep-black: #050505;
+    --color-tech-line: #2a2a2a;
+
+    /* Typography */
+    --font-heading: "Bricolage Grotesque", "sans-serif";
+    --font-sans: "Inter", "sans-serif";
+
+    --animate-marquee: marquee 30s linear infinite;
+    --animate-marquee-reverse: marquee-reverse 15s linear infinite;
+    --animate-scrolling-text: scrolling-text 30s linear infinite;
+    --animate-spin-slow: spin 20s linear infinite;
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes marquee-reverse {
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes scrolling-text {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* 
+   REVEAL ANIMATIONS 
+   Triggered by IntersectionObserver in main.js
+ */
+.reveal,
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active,
+.reveal-on-scroll.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Scroll Scale Video */
+.video-container {
+    width: calc(var(--scale-video) * 100%);
+    border-radius: var(--radius-video);
+    overflow: hidden;
+    transition: width 0.1s linear, border-radius 0.1s linear;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.9);
+    position: relative;
+}
+
+/* Logo Marquee Pill */
+.logo-marquee-container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 20px 40px;
+}
+
+.logo-item {
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-item:hover {
+    transform: scale(1.1);
+    opacity: 1 !important;
+    color: var(--color-accent);
+}
+
+/* Pause marquee on hover */
+.logo-marquee-container:hover .animate-marquee,
+.logo-marquee-container:hover .animate-marquee-reverse,
+.border-y:hover .animate-marquee,
+.border-y:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+}
+
+/* Scrollable Marquee */
+.scrollable-marquee {
+    cursor: grab;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.scrollable-marquee:active {
+    cursor: grabbing;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.scrollable-marquee::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hover Pop Thumbnail */
+.hover-target {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-target:hover {
+    transform: scale(1.05);
+    color: var(--color-accent);
+}
+
+.hover-preview {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 50;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hover-target:hover .hover-preview {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    bottom: 140%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+/* Custom utility */
+.stroke-text {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Perspective for 3D tilt */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.rotate-y-12 {
+    transform: rotateY(12deg);
+}
+
+.tilt-wrapper {
+    transition: transform 0.1s ease-out;
+}
+
+/* Mask Image for bottom fade */
+.mask-image-gradient {
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* 
+   HUD & DECORATIVE ELEMENTS 
+   Styles for the futuristic tech-accent elements
+ */
+.hud-globe-container {
+    perspective: 500px;
+}
+
+.hud-globe {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--color-neon-blue);
+    opacity: 0.5;
+    position: relative;
+    animation: spin 8s linear infinite;
+}
+
+.hud-globe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--color-neon-blue);
+    opacity: 0.5;
+    transform: rotateX(60deg);
+}
+
+.hud-globe::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--color-neon-blue);
+    opacity: 0.5;
+    transform: rotateY(60deg);
+}
+
+.circuit-lines {
+    background-image:
+        linear-gradient(to right, rgba(77, 238, 234, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(77, 238, 234, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.hud-bar-container {
+    border: 1px solid #4deeea;
+    width: 20px;
+    height: 180px;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(77, 238, 234, 0.2);
+}
+
+.hud-bar-fill {
+    background-color: #4deeea;
+    width: 100%;
+    height: 60%;
+    box-shadow: 0 0 5px rgba(77, 238, 234, 0.5);
+    animation: hud-bar-anim 3s infinite alternate ease-in-out;
+}
+
+@keyframes hud-bar-anim {
+    0% {
+        height: 30%;
+        opacity: 0.8;
+    }
+
+    100% {
+        height: 75%;
+        opacity: 1;
+    }
+}
+
+/* Filter Button Active State */
+.filter-btn.active {
+    border-color: #00a3ff !important;
+    background: rgba(0, 163, 255, 0.1) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(0, 163, 255, 0.2);
+}
+
+/* Premium Box Styles */
+/* Premium Box Styles */
+.project-card {
+    cursor: pointer;
+}
+
+/* Cursor always visible for reliability */
+.project-card .group-cursor-play:hover {
+    cursor: pointer;
+}
+
+.project-card.is-playing,
+.project-card.is-playing .group-cursor-play,
+.project-card.is-playing .video-iframe-wrapper {
+    cursor: default !important;
+}
+
+/* Inline Video Playback State - Hide overlays */
+.project-card.is-playing .project-thumb,
+.project-card.is-playing .bg-gradient-to-t,
+.project-card.is-playing h3,
+.project-card.is-playing span,
+.project-card.is-playing .absolute.top-1\/2.left-1\/2 {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
+
+/* Custom Video Iframe Masking */
+.video-iframe-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    border-radius: 32px;
+    background: #000;
+    z-index: 100;
+    border-radius: 32px;
+    background: #000;
+}
+
+/* Subtle masking to hide the top title overlay of YouTube iframes */
+.video-iframe-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    pointer-events: auto !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    pointer-events: auto !important;
+}
