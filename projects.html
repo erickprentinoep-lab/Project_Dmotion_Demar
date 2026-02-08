@@ -11,7 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
+        @import "tailwindcss";
+
         @theme {
             /* Base Theme Colors */
             --color-dark: #0a0a0a;
@@ -51,43 +54,34 @@
             }
         }
 
-        /* Custom Utilities */
-        .filter-btn.active {
-            border-color: #00a3ff !important;
-            background: rgba(0, 163, 255, 0.1) !important;
-            color: white !important;
-            box-shadow: 0 0 15px rgba(0, 163, 255, 0.2);
+        .perspective-1000 { perspective: 1000px; }
+        .tilt-wrapper { transition: transform 0.1s ease-out; }
+
+        .stroke-text {
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
         }
 
-        .project-card.is-playing .project-thumb,
-        .project-card.is-playing h3,
-        .project-card.is-playing span,
-        .project-card.is-playing .absolute {
-            opacity: 0 !important;
-            visibility: hidden !important;
+        .mask-image-gradient {
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
 
-        .video-iframe-wrapper {
-            position: absolute;
-            inset: 0;
-            z-index: 100;
-            border-radius: 32px;
-            background: #000;
+        .reveal, .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .video-iframe-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 32px;
+        .reveal.active, .reveal-on-scroll.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
 
-        .logo-marquee-container {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 9999px;
-            padding: 20px 40px;
-        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #333; }
     </style>
 </head>
 
