@@ -48,11 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Navbar Styles on Scroll
         if (navbar) {
             if (scrollY > 50) {
-                navbar.classList.add('bg-dark/80', 'backdrop-blur-md', 'py-2', 'border-b', 'border-white/5');
-                navbar.classList.remove('py-4', 'bg-transparent');
+                navbar.classList.add('bg-dark/80', 'py-2');
+                navbar.classList.remove('bg-dark/40', 'py-3', 'md:py-4');
+                navbar.style.top = '1rem';
             } else {
-                navbar.classList.remove('bg-dark/80', 'backdrop-blur-md', 'py-2', 'border-b', 'border-white/5');
-                navbar.classList.add('py-4', 'bg-transparent');
+                navbar.classList.remove('bg-dark/80', 'py-2');
+                navbar.classList.add('bg-dark/40', 'py-3', 'md:py-4');
+                navbar.style.top = ''; // Follows CSS class (4-6 top)
             }
         }
 
